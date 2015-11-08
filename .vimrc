@@ -35,10 +35,10 @@ set number
 set colorcolumn=80
 highlight ColorColumn ctermbg=238
 
+let g:solarized_termcolors=16
+set t_Co=16
 set background=dark
-let g:solarized_termcolors=256
 colorscheme solarized
-
 
 
 ""
