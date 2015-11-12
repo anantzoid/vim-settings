@@ -48,6 +48,7 @@ colorscheme solarized
 " Set proper indentation width
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 
 " Round indent to multiple of 'shiftwidth' for > and < commands
 set shiftround
