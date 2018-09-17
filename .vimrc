@@ -31,14 +31,17 @@ syntax on
 " Show line numbers
 set number
 
-" Colored column (to see line size violations)
-set colorcolumn=80
-highlight ColorColumn ctermbg=238
+" Show command menu
+set wildmenu
 
-let g:solarized_termcolors=16
-set t_Co=16
-set background=dark
-colorscheme solarized
+" Colored column (to see line size violations)
+"set colorcolumn=80
+"highlight ColorColumn ctermbg=238
+
+"let g:solarized_termcolors=256
+"set t_Co=256
+"set background=dark
+"colorscheme solarized
 
 
 ""
@@ -74,6 +77,8 @@ set showcmd
 " Always show Show current mode at the bottom
 set showmode
 
+" Shows matching braces
+set showmatch
 
 
 ""
@@ -114,7 +119,7 @@ filetype indent on
 autocmd bufwritepost .vimrc source $MYVIMRC
 
 " Don't highlight results of a search
-set nohlsearch
+set hlsearch
 
 " Jump 5 lines when running out of the screen
 set scrolljump=1
@@ -140,13 +145,16 @@ let mapleader = ","
 
 " page down with <Space>
 nmap <Space> <PageDown>
-
+map <Space> :noh<cr>
 " page down with <Space>
 " nmap <Space> <PageUp>
 
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv 
+
+" highlight last inserted text
+nnoremap gV `[v`]
 
 " Highlight current line in insert mode.
 " autocmd InsertLeave * se nocul
@@ -163,3 +171,7 @@ execute pathogen#infect()
 let g:CommandTMaxHeight=20
 let g:CommandTCancelMap='<Esc>'
 let g:CommandTAcceptSelectionTabMap='t'
+
+let g:syntastic_python_checkers = ['pyflakes']
+
+
