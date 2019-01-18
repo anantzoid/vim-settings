@@ -35,14 +35,17 @@ set number
 set wildmenu
 
 " Colored column (to see line size violations)
-"set colorcolumn=80
+set colorcolumn=80
 "highlight ColorColumn ctermbg=238
 
 "let g:solarized_termcolors=256
 "set t_Co=256
 "set background=dark
-"colorscheme solarized
+colorscheme monokai
 
+
+" Don't highlight results of a search
+set hlsearch
 
 ""
 "" INDENTATION
@@ -104,22 +107,12 @@ set ic
 set scs
 
 
-
-
-
-
 filetype plugin on
 filetype indent on
-
-
-
-
 
 " Source .vimrc after saving .vimrc
 autocmd bufwritepost .vimrc source $MYVIMRC
 
-" Don't highlight results of a search
-set hlsearch
 
 " Jump 5 lines when running out of the screen
 set scrolljump=1
@@ -174,4 +167,7 @@ let g:CommandTAcceptSelectionTabMap='t'
 
 let g:syntastic_python_checkers = ['pyflakes']
 
+set undodir=~/.vim/undodir
+set undofile
 
+let g:flake8_show_in_gutter = 1
