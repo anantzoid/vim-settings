@@ -120,6 +120,9 @@ set scrolljump=1
 " Indicate jump out of the screen when 3 lines before end of the screen
 set scrolloff=3
 
+" Enable mouse scrolling
+set mouse=a
+
 ""
 "" KEY MAPPING / SHORTCUTS 
 ""
